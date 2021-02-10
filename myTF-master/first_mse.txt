@@ -1,0 +1,73 @@
+Model: "sequential"
+Loss: "mse"
+metrics = ['accuracy']
+optimizer = optimizers.SGD(lr=0.001, momentum=0.9)
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+conv2d (Conv2D)              (None, 28, 28, 6)         456
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 14, 14, 6)         0
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 10, 10, 16)        2416
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 5, 5, 16)          0
+_________________________________________________________________
+flatten (Flatten)            (None, 400)               0
+_________________________________________________________________
+dense (Dense)                (None, 120)               48120
+_________________________________________________________________
+dense_1 (Dense)              (None, 84)                10164
+_________________________________________________________________
+dense_2 (Dense)              (None, 10)                850
+=================================================================
+Total params: 62,006
+Trainable params: 62,006
+Non-trainable params: 0
+_________________________________________________________________
+
+2021-02-04 00:04:54.815631: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+Epoch 1/20
+12500/12500 [==============================] - 36s 3ms/step - loss: 0.0879 - accuracy: 0.1888 - val_loss: 0.0813 - val_accuracy: 0.3223
+Epoch 2/20
+12500/12500 [==============================] - 24s 2ms/step - loss: 0.0795 - accuracy: 0.3495 - val_loss: 0.0776 - val_accuracy: 0.3678
+Epoch 3/20
+12500/12500 [==============================] - 26s 2ms/step - loss: 0.0763 - accuracy: 0.3893 - val_loss: 0.0741 - val_accuracy: 0.4141
+Epoch 4/20
+12500/12500 [==============================] - 23s 2ms/step - loss: 0.0737 - accuracy: 0.4260 - val_loss: 0.0729 - val_accuracy: 0.4298
+Epoch 5/20
+12500/12500 [==============================] - 24s 2ms/step - loss: 0.0721 - accuracy: 0.4406 - val_loss: 0.0714 - val_accuracy: 0.4488
+Epoch 6/20
+12500/12500 [==============================] - 22s 2ms/step - loss: 0.0700 - accuracy: 0.4634 - val_loss: 0.0696 - val_accuracy: 0.4598
+Epoch 7/20
+12500/12500 [==============================] - 27s 2ms/step - loss: 0.0692 - accuracy: 0.4687 - val_loss: 0.0683 - val_accuracy: 0.4760
+Epoch 8/20
+12500/12500 [==============================] - 23s 2ms/step - loss: 0.0677 - accuracy: 0.4876 - val_loss: 0.0667 - val_accuracy: 0.4958
+Epoch 9/20
+12500/12500 [==============================] - 27s 2ms/step - loss: 0.0666 - accuracy: 0.4955 - val_loss: 0.0656 - val_accuracy: 0.5027
+Epoch 10/20
+12500/12500 [==============================] - 25s 2ms/step - loss: 0.0652 - accuracy: 0.5129 - val_loss: 0.0647 - val_accuracy: 0.5161
+Epoch 11/20
+12500/12500 [==============================] - 23s 2ms/step - loss: 0.0641 - accuracy: 0.5188 - val_loss: 0.0635 - val_accuracy: 0.5296
+Epoch 12/20
+12500/12500 [==============================] - 28s 2ms/step - loss: 0.0633 - accuracy: 0.5292 - val_loss: 0.0634 - val_accuracy: 0.5314
+Epoch 13/20
+12500/12500 [==============================] - 22s 2ms/step - loss: 0.0622 - accuracy: 0.5430 - val_loss: 0.0624 - val_accuracy: 0.5439
+Epoch 14/20
+12500/12500 [==============================] - 22s 2ms/step - loss: 0.0611 - accuracy: 0.5546 - val_loss: 0.0622 - val_accuracy: 0.5421
+Epoch 15/20
+12500/12500 [==============================] - 22s 2ms/step - loss: 0.0606 - accuracy: 0.5544 - val_loss: 0.0629 - val_accuracy: 0.5287
+Epoch 16/20
+12500/12500 [==============================] - 24s 2ms/step - loss: 0.0596 - accuracy: 0.5661 - val_loss: 0.0597 - val_accuracy: 0.5646
+Epoch 17/20
+12500/12500 [==============================] - 25s 2ms/step - loss: 0.0589 - accuracy: 0.5716 - val_loss: 0.0610 - val_accuracy: 0.5444
+Epoch 18/20
+12500/12500 [==============================] - 23s 2ms/step - loss: 0.0584 - accuracy: 0.5760 - val_loss: 0.0596 - val_accuracy: 0.5619
+Epoch 19/20
+12500/12500 [==============================] - 22s 2ms/step - loss: 0.0579 - accuracy: 0.5795 - val_loss: 0.0585 - val_accuracy: 0.5745
+Epoch 20/20
+12500/12500 [==============================] - 24s 2ms/step - loss: 0.0565 - accuracy: 0.5956 - val_loss: 0.0580 - val_accuracy: 0.5773
+
+
+
+Correct: 5773 Out of: 10000
