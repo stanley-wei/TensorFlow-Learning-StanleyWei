@@ -1,3 +1,7 @@
 lib/**
 lib/*
 lib/
+myTF-master/results
+myTF-master/results/*
+reuters_TF/results
+reuters_TF/results/*
